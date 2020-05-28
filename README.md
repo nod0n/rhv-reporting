@@ -1,7 +1,9 @@
 # rhv-reporting
 Trilio reporting tools for RHV backups
 
-This procedure will create report files for each TrilioVault Workload and a single Overall report for each 24 hour period.
+This procedure will create report files for each TrilioVault Workload and a single Overall report for each 24 hour period. This needs to be run on the TrilioVault Virtual Appliance.
+
+### NOTE: Before you begin - if you're using TrilioVault 3.7, you'll need to use the ```overall_report_3.7.py``` file INSTEAD OF ```overall_report.py```
 
 ### DIRECTIONS TO ENABLE REPORTS
 1. STEP 1- Create the directory structure that will house the backup reports
