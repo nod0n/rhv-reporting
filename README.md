@@ -6,11 +6,16 @@ This procedure will create report files for each TrilioVault Workload and a sing
 ### NOTE: Before you begin - if you're using TrilioVault 3.7, you'll need to use the ```overall_report_3.7.py``` file INSTEAD OF ```overall_report.py```
 
 ### DIRECTIONS TO ENABLE REPORTS
-1. STEP 1- Create the directory structure that will house the backup reports
+
+1. STEP 1- Copy reporting Python scripts to the /root/rhv-reporting directory
+
+    ```cd /root```
+    ```git clone https://github.com/jon-tobin/rhv-reporting.git```
+
+1. STEP 2- Create the directory structure that will house the backup reports
+
     ```mkdir -p /root/rhv-reporting/{overall_report,workload_report}```
-1. STEP 2- Copy reporting Python scripts to the /root/report directory
-  ```cd /root```
-  ```git clone https://github.com/jon-tobin/rhv-reporting.git```
+
 1. STEP 3- Add execute permissions to Python files
   ```chmod +x overall_report.py workload_report.py```
 1. STEP 4- Activate Python and enable reporting scripts
