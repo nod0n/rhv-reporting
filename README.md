@@ -17,15 +17,30 @@ This procedure will create report files for each TrilioVault Workload and a sing
     ```mkdir -p /root/rhv-reporting/{overall_report,workload_report}```
 
 1. STEP 3- Add execute permissions to Python files
-  ```chmod +x overall_report.py workload_report.py```
+
+    ```cd /root/rhv-reporting```
+
+    ```chmod +x overall_report.py workload_report.py```
+    or
+    ```chmod +x overall_report_3.7.py workload_report.py```
+
 1. STEP 4- Activate Python and enable reporting scripts
- ```/home/rhv/myansible/bin/activate```
+
+   ```/home/rhv/myansible/bin/activate```
+
 1. STEP 5- Install configparser
-  ```pip install configparser```
+
+    ```pip install configparser```
+
 1. STEP 6- Create a Cron job to run both scripts at the same time each day. This script will run both reports at 12:01 AM every day of the year
-   1. STEP 6a- Copy crontab file from rhv-reporting folder
-  ```cd /root/rhv-reporting```
-  ```cp reporting_cron /var/spool/cron/root```
+   1. STEP 6a- Copy the coresponding crontab file from rhv-reporting folder
+
+    ```cd /root/rhv-reporting```
+
+    ```cp reporting_cron /var/spool/cron/root```
+    or
+    ```cp reporting_cron_3.7 /var/spool/cron/root```
+
 1. STEP 7- Register crontab file for root
-  ```crontab -e```
- 
+
+    ```crontab -e```
